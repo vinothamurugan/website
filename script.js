@@ -1,12 +1,35 @@
-// News article data
-const articleData = {
-    title: 'India Wins Thrilling Match Against Pakistan',
-    content: 'India won a thrilling match against Pakistan in the ICC Cricket World Cup. The match was played at the Old Trafford stadium in Manchester, England. India batted first and scored 336 runs in 50 overs. Pakistan chased the target but fell short by 89 runs. Indian bowler Jasprit Bumrah took 3 wickets for 60 runs.',
-};
+// Tobacco facts
+const facts = [
+    'Tobacco use is the leading cause of preventable death worldwide.',
+    'Smoking can increase your risk of heart disease, stroke, and lung cancer.',
+    'Secondhand smoke can cause serious health problems, including lung cancer and heart disease.',
+];
 
-// Display news article
-const articleTitle = document.getElementById('article-title');
-articleTitle.textContent = articleData.title;
+// Resources
+const resources = [
+    'National Cancer Institute: Smoking Quitline (1-877-44U-QUIT)',
+    'American Cancer Society: QuitForLife Program',
+    'American Lung Association: Freedom From Smoking Program',
+];
 
-const articleContent = document.getElementById('article-content');
-articleContent.textContent = articleData.content;
+// Display tobacco facts
+const factList = document.getElementById('fact-list');
+facts.forEach((fact) => {
+    const listItem = document.createElement('li');
+    listItem.textContent = fact;
+    factList.appendChild(listItem);
+});
+
+// Display resources
+const resourceList = document.getElementById('resource-list');
+resources.forEach((resource) => {
+    const listItem = document.createElement('li');
+    listItem.textContent = resource;
+    resourceList.appendChild(listItem);
+});
+
+// Quit smoking button
+const quitSmokingButton = document.getElementById('quit-smoking-button');
+quitSmokingButton.addEventListener('click', () => {
+    alert('Congratulations on taking the first step towards quitting smoking!');
+});
